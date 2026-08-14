@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configurações de segurança no CSP -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self'; 
+        style-src 'self' https://fonts.googleapis.com; 
+        font-src https://fonts.gstatic.com; 
+        script-src 'self'; 
+        connect-src 'none'; 
+        object-src 'none'; 
+        base-uri 'self';
+        form-action 'none';
+        upgrade-insecure-requests;">
+    
+    <title>Analisador de Texto Neutro - IA e Plágio</title>
+    
+    <!-- Preconnect com integridade de origem -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Analisador de Textos</h1>
+            <p>Varredura estocástica de IA e ferramentas de auditoria de plágio baseadas em privacidade</p>
+        </header>
+
+        <label for="textInput" class="sr-only">Texto para análise</label>
+        <textarea id="textInput" placeholder="Insira seu texto aqui para análise (mínimo de 150 caracteres e máximo de 10.000)..."
+            maxlength="10000" aria-describedby="charCount wordCount"></textarea>
+
+        <div class="meta-info">
+            <span id="charCount">Caracteres: 0 / 10000</span>
+            <span id="wordCount">Palavras: 0</span>
+        </div>
+
+        <div class="actions-group">
+            <button type="button" id="analyzeBtn" class="btn-primary">Executar Análise</button>
+            <button type="button" id="clearBtn" class="btn-secondary hidden">Nova Análise</button>
+        </div>
+
+        <section class="results-section hidden" id="resultsSection" aria-live="polite">
+            <div class="results-grid">
+                <div class="card-metric">
+                    <div class="metric-title">Probabilidade de Produção por IA</div>
+                    <div class="metric-value" id="iaValue">0%</div>
+                    <div class="metric-status" id="iaStatus">Analítico</div>
+                </div>
+
+                <div class="card-metric">
+                    <div class="metric-title">Frases Suspeitas / Auditoria</div>
+                    <div class="metric-value" id="plagioValue">0</div>
+                    <div class="metric-status status-primary" id="plagioStatus">Verificado</div>
+                </div>
+            </div>
+
+            <div class="plagiarized-sentences">
+                <h3>Segmentação de Frases para Validação de Cópia Exata</h3>
+                <p class="description-text">
+                    Clique em "Auditar na Web" para verificar em tempo real se a frase exata já existe indexada em
+                    motores de busca públicos.
+                </p>
+                <ul class="sentence-list" id="sentenceList"></ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/script.js" defer></script>
+</body>
+
+</html>
