@@ -18,10 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const sentenceListEl = document.getElementById('sentenceList');
 
     const AI_CLICHES = Object.freeze([
-        "em resumo", "portanto", "é fundamental", "vale ressaltar", "por fim",
-        "em suma", "notavelmente", "além disso", "com efeito", "torna-se evidente",
-        "com o objetivo de", "neste cenário", "desempenha um papel", "relevante",
-        "perspectiva", "importantíssimo", "crucial"
+        'em resumo', 'portanto', 'é fundamental', 'vale ressaltar', 'por fim',
+        'em suma', 'notavelmente', 'além disso', 'com efeito', 'torna-se evidente',
+        'com o objetivo de', 'neste cenário', 'desempenha um papel', 'relevante',
+        'perspectiva', 'importantíssimo', 'crucial'
     ]);
 
     function escapeRegExp(string) {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const text = textInput.value;
         const chars = text.length;
         const trimmedText = text.trim();
-        const words = trimmedText === "" ? 0 : trimmedText.split(/\s+/).length;
+        const words = trimmedText === '' ? 0 : trimmedText.split(/\s+/).length;
 
         charCountEl.textContent = `Caracteres: ${chars} / 10000`;
         wordCountEl.textContent = `Palavras: ${words}`;
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const text = textInput.value.trim();
 
         if (text.length < 150) {
-            alert("Por favor, insira um texto mais longo (mínimo de 150 caracteres) para uma análise consistente.");
+            alert('Por favor, insira um texto mais longo (mínimo de 150 caracteres) para uma análise consistente.');
             return;
         }
 
@@ -98,22 +98,22 @@ document.addEventListener('DOMContentLoaded', () => {
         if (iaScore > 70) {
             iaValueEl.classList.add('metric-value-danger');
             iaStatusEl.classList.add('status-danger');
-            iaStatusEl.textContent = "Altamente Suspeito";
+            iaStatusEl.textContent = 'Altamente Suspeito';
         } else if (iaScore > 40) {
             iaValueEl.classList.add('metric-value-warning');
             iaStatusEl.classList.add('status-warning');
-            iaStatusEl.textContent = "Padrão Misto / Revisar";
+            iaStatusEl.textContent = 'Padrão Misto / Revisar';
         } else {
             iaValueEl.classList.add('metric-value-success');
             iaStatusEl.classList.add('status-success');
-            iaStatusEl.textContent = "Provavelmente Humano";
+            iaStatusEl.textContent = 'Provavelmente Humano';
         }
 
         // --- 2. MÓDULO DE PLÁGIO (CONSTRUÇÃO SEGURA DE URL) ---
         sentenceListEl.textContent = '';
 
         plagioValueEl.textContent = sentences.length;
-        plagioStatusEl.textContent = "Pronto para Verificação";
+        plagioStatusEl.textContent = 'Pronto para Verificação';
         plagioStatusEl.className = 'metric-status status-primary';
 
         sentences.slice(0, 10).forEach(sentence => {

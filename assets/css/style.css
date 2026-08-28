@@ -1,6 +1,8 @@
+@charset "UTF-8";
+
 :root {
     --bg-app: #f8fafc;
-    --surface: #ffffff;
+    --surface: #fff;
     --border: #e2e8f0;
     --text-main: #0f172a;
     --text-muted: #64748b;
@@ -35,7 +37,7 @@ body {
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    clip-path: inset(50%);
     border: 0;
 }
 
@@ -46,7 +48,7 @@ body {
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 30px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 5%), 0 2px 4px -1px rgb(0 0 0 / 3%);
 }
 
 header {
@@ -83,7 +85,7 @@ textarea {
 
 textarea:focus {
     border-color: var(--primary);
-    background-color: #ffffff;
+    background-color: #fff;
 }
 
 .meta-info {
@@ -91,7 +93,7 @@ textarea:focus {
     justify-content: space-between;
     font-size: 13px;
     color: var(--text-muted);
-    margin: 8px 0 20px 0;
+    margin: 8px 0 20px;
 }
 
 .actions-group {
@@ -103,7 +105,7 @@ textarea:focus {
 .btn-primary {
     flex: 1;
     background-color: var(--primary);
-    color: #ffffff;
+    color: #fff;
     border: none;
     padding: 14px;
     border-radius: 8px;
@@ -142,14 +144,14 @@ textarea:focus {
 
 .results-section {
     margin-top: 35px;
-    animation: fadeIn 0.4s ease-in-out;
+    animation: fade-in 0.4s ease-in-out;
 }
 
 .results-section.hidden {
     display: none;
 }
 
-@keyframes fadeIn {
+@keyframes fade-in {
     from {
         opacity: 0;
         transform: translateY(10px);
@@ -168,7 +170,7 @@ textarea:focus {
     margin-bottom: 25px;
 }
 
-@media (max-width: 640px) {
+@media (width <= 640px) {
     .results-grid {
         grid-template-columns: 1fr;
     }
@@ -207,22 +209,22 @@ textarea:focus {
 /* Classes para alteração de estado sem o uso de inline-styles */
 .status-danger {
     color: var(--danger);
-    background-color: rgba(239, 68, 68, 0.1);
+    background-color: rgb(239 68 68 / 10%);
 }
 
 .status-warning {
     color: var(--warning);
-    background-color: rgba(245, 158, 11, 0.1);
+    background-color: rgb(245 158 11 / 10%);
 }
 
 .status-success {
     color: var(--success);
-    background-color: rgba(16, 185, 129, 0.1);
+    background-color: rgb(16 185 129 / 10%);
 }
 
 .status-primary {
     color: var(--primary);
-    background-color: rgba(79, 70, 229, 0.1);
+    background-color: rgb(79 70 229 / 10%);
 }
 
 .metric-value-danger {
@@ -289,13 +291,12 @@ textarea:focus {
 
 .audit-link:hover {
     background-color: var(--primary);
-    color: #ffffff;
+    color: #fff;
 }
 
 /* --- RESPONSIVIDADE E ADAPTAÇÃO MÓVEL --- */
 
-@media (max-width: 640px) {
-
+@media (width <= 640px) {
     /* Empilha os cards de métricas em telas pequenas */
     .results-grid {
         grid-template-columns: 1fr;
@@ -307,8 +308,7 @@ textarea:focus {
     }
 }
 
-@media (max-width: 480px) {
-
+@media (width <= 480px) {
     /* Empilha os botões em celulares muito pequenos */
     .actions-group {
         flex-direction: column;

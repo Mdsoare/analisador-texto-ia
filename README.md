@@ -1,9 +1,25 @@
 # 🛡️ Analisador de Texto Neutro — IA & Plágio
 
-![License](https://img.shields.io/github/license/Mdsoare/analisador-texto-ia?style=for-the-badge&color=4f46e5)
-![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-success?style=for-the-badge&logo=github)
-![Security](https://img.shields.io/badge/Security-DevSecOps%20Hardened-blue?style=for-the-badge&logo=dependabot)
-![Stack](https://img.shields.io/badge/Tech-HTML5%20%7C%20CSS3%20%7C%20JS%20(Vanilla)-orange?style=for-the-badge&logo=javascript)
+<!-- Badges do Topo -->
+
+[![CI Pipeline](https://github.com/Mdsoare/analisador-texto-ia/actions/workflows/sec-scan.yml/badge.svg)](https://github.com/Mdsoare/analisador-texto-ia/actions/workflows/sec-scan.yml)
+[![Security Rating](https://img.shields.io/badge/Security-DevSecOps%20Hardened-green?style=flat&logo=github)](https://github.com/Mdsoare/analisador-texto-ia/security/code-scanning)
+![Security: CSP Compliant](https://img.shields.io/badge/Security-CSP--Compliant-success.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
+
+<!-- Tech Stack & DevSecOps Ecosystem -->
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
+![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
+![Dependabot](https://img.shields.io/badge/Dependabot-025E8C?style=for-the-badge&logo=dependabot&logoColor=white)
+![SAST & SCA](https://img.shields.io/badge/DevSecOps-SAST%20%26%20SCA-red?style=for-the-badge&logo=shield&logoColor=white)
+
+---
 
 Uma solução **100% client-side**, leve, rápida e centrada em privacidade para análise de densidade estocástica de termos de IA e auditoria imediata de plágio no ecossistema web.
 
@@ -83,4 +99,5 @@ Para validar as métricas do detector de IA e a segmentação de plágio, utiliz
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
+
 *Desenvolvido por **Marcelo Soares** | Especialista em Segurança da Informação e Computação Forense.*
